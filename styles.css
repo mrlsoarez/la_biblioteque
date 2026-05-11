@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+    background-color: rgb(213, 213, 213);;
+}
+
+.Card > span:nth-child(1) {
+    background-color: grey;
+    font-weight: bolder;
+}
