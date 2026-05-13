@@ -17,3 +17,12 @@
     background-color: grey;
     font-weight: bolder;
 }
+
+form {
+    display: none;
+}
+
+form.Visible {
+    display: flex;
+    flex-direction: column;
+}

@@ -23,32 +23,47 @@ function createElements(parent_node, type, className, content = null, id = null)
 }
 
 function displayBooks() {
-    let card_index = 0;
-    for (let i = 0; i < myLibrary.length; i++) {
-        ID_NUM = 'card' + (i + 1);
+    ID_NUM = 'card-' + myLibrary.length;
+    if (document.querySelector("#"+ID_NUM) == null) {
+        index = myLibrary.length - 1;
         createElements('.Container', 'div', 'Card Book', content = null, id = ID_NUM);
-        createElements('#' + ID_NUM, 'span', 'Title', 'Title: ' + myLibrary[i].title);
-        createElements('#' + ID_NUM, 'span', 'Author', 'Author: ' + myLibrary[i].author);
-        createElements('#' + ID_NUM, 'span', 'Page', 'Pages: ' + myLibrary[i].pages);
-        let CARD_BOX = document.getElementsByClassName("Card Book");
+        createElements('#' + ID_NUM, 'span', 'Title', 'Title: ' + myLibrary[index].title);
+        createElements('#' + ID_NUM, 'span', 'Author', 'Author: ' + myLibrary[index].author);
+        createElements('#' + ID_NUM, 'span', 'Page', 'Pages: ' + myLibrary[index].pages);
     }
-
-    card_books = document.getElementsByClassName('Card');
-    console.log(card_books[0].id);
-
-
-    /*
-
-    for (let q = 0; q< myLibrary.length; q++) {
-        createElements(CARD_BOX[q].className, 'span', 'Title', myLibrary[q].title);
-    }
-    */
-    
 
 }
 
-addBookToLibrary("Harry Potter", "JK Rowling", 300, crypto.randomUUID());
-addBookToLibrary("Misery", "Stephen King", 306, crypto.randomUUID());
-addBookToLibrary("La Haine", "George Froid", 108, crypto.randomUUID());
+function InsertBookIntoForm() {
 
-displayBooks();
+    let myForm = document.querySelector('form');
+    myForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        let title = formData.get('title');
+        let author = formData.get('author');
+        let pages = formData.get('pages');
+        addBookToLibrary(title, author, pages);
+        displayBooks();
+        myForm.reset();
+    })
+}
+
+function toggleForm() {
+    let toggle = document.querySelectorAll(".Toggle-Form");
+    let myForm = document.querySelector("form");
+    toggle.forEach((t) => {
+        t.addEventListener("click", () => {
+            myForm.classList.toggle("Visible");
+        })
+    })
+}
+
+toggleForm();
+InsertBookIntoForm();
+//addBookToLibrary("Harry Potter", "JK Rowling", 300, crypto.randomUUID());
+//addBookToLibrary("Misery", "Stephen King", 306, crypto.randomUUID());
+//addBookToLibrary("La Haine", "George Froid", 108, crypto.randomUUID());
+
+//displayBooks();
