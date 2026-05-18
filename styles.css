@@ -18,6 +18,10 @@
     font-weight: bolder;
 }
 
+.Card > .Read-Status {
+    display: flex;
+}
+
 form {
     display: none;
 }
