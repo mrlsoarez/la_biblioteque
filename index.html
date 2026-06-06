@@ -12,6 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- Basic Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <!-- Filled Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <!-- Brand Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 </head>
 <body>
     <div class = "Title">
@@ -32,6 +38,10 @@
             </div>
             <div class = "Form-Wrapper">
                 <form class = "Visible" method = 'POST'>
+                    <img src = "images/books-removebg-preview.png">
+                    <section>
+                        <h3> Make it sleazy.</h3>
+                    </section>
                     <section>
                         <label for = "title">Title:</label>
                         <input name = "title" type = "text" required>
@@ -45,9 +55,11 @@
                         <input name = "pages" type = "number" required> 
                     </section>
                     <section>
-                        <input type = "submit">
+                        <button type = "submit">
+                            <i class="bx bx-check"></i>
+                        </button>
                     </section>
-                    <button class = "Toggle-Form">X</button>
+                    <button class = "Toggle-Form"></button>
                 </form>
             </div>
         </div>

@@ -34,10 +34,10 @@ function displayBooks() {
         ID_CARD = myLibrary[i].ID;
         if (document.querySelector("#" + ID_CARD) == null) {
             createElements('.Container', 'div', 'Card Book', content = null, id = ID_CARD);
-            createElements("#" + ID_CARD, 'span', 'Title', 'Title: ' + myLibrary[i].title);
-            createElements("#" + ID_CARD, 'span', 'Author', 'Author: ' + myLibrary[i].author);
+            createElements("#" + ID_CARD, 'span', 'Title', '' + myLibrary[i].title);
+            createElements("#" + ID_CARD, 'span', 'Author', 'Written by ' + myLibrary[i].author);
             createElements("#" + ID_CARD, 'span', 'Page', 'Pages: ' + myLibrary[i].pages);
-            createElements("#" + ID_CARD, 'button', 'Delete', 'delete', id = 'delete-btn');
+            createElements("#" + ID_CARD, 'button', 'Delete', 'X', id = 'delete-btn');
 
             // read status
             createElements("#" + ID_CARD, 'div', 'Read-Status', content = null, id = 'check-' + ID_CARD);
