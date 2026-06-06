@@ -5,28 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Biblioteque</title>
     <script src = "script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class = "Container"></div>
-    <form class = "Visible" method = 'POST'>
-        <section>
-            <label for = "title">Title:</label>
-            <input name = "title" type = "text" required>
-        </section>
-        <section>
-            <label for = "author">Author: </label>
-            <input name = "author" type="text" required>
-        </section>
-        <section>
-            <label for = "pages">Pages: </label>
-            <input name = "pages" type = "number" required> 
-        </section>
-        <section>
-            <input type = "submit">
-        </section>
-        <button class = "Toggle-Form">X</button>
-    </form>
+    <div class = "Title">
+        <img src = "images/newspaper.jpg">
+        <h1> La Biblioteque </h1>
+    </div>
+    <div class = "Library">
+        <div class = "Container"></div>
+        <div class = "Form Container">
+            <div class = "Form-Title">
+                <div>
+                    <img src = "images/camera-removebg-preview.png">
+                </div>
+                <div>
+                    <h3>Add a book to your library!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae molestiae illo itaque vel iure voluptate, iste ullam nobis aliquam, impedit, quibusdam rem voluptas tempore voluptates iusto ratione recusandae voluptatum quaerat.</p>
+                </div>
+            </div>
+            <div class = "Form-Wrapper">
+                <form class = "Visible" method = 'POST'>
+                    <section>
+                        <label for = "title">Title:</label>
+                        <input name = "title" type = "text" required>
+                    </section>
+                    <section>
+                        <label for = "author">Author: </label>
+                        <input name = "author" type="text" required>
+                    </section>
+                    <section>
+                        <label for = "pages">Pages: </label>
+                        <input name = "pages" type = "number" required> 
+                    </section>
+                    <section>
+                        <input type = "submit">
+                    </section>
+                    <button class = "Toggle-Form">X</button>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+   
     <button class = "Toggle-Form">Toggle It</button>
 </body>
 </html>
