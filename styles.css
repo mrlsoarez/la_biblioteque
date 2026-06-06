@@ -182,7 +182,10 @@ form  section:nth-child(6) button:hover {
     grid-template-rows: repeat(50, 35%);
     gap: 5px;
     padding: 10px;
-    overflow: scroll;
+}
+
+.Library .Container:nth-child(1) {
+    overflow-y: scroll;
 }
 
 .Card {
@@ -199,7 +202,8 @@ form  section:nth-child(6) button:hover {
 
 .Card > span:nth-child(1) {
     background: black;
-    opacity: 0.5;
+    opacity: 0.8;
+    border-radius: 10% 10% 0px 0px;
     color: white;
     font-size: 20px;
 }
